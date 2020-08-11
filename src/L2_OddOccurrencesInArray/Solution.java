@@ -33,6 +33,24 @@ package L2_OddOccurrencesInArray;
  * each element of array A is an integer within the range [1..1,000,000,000];
  * all but one of the values in A occur an even number of times.
  */
-
+import java.util.HashMap;
 public class Solution {
+    public int solution(int[] A) {
+    // write your code in Java SE 8
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for (int i: A){
+            if (!map.containsKey(i)) {
+                map.put(i, 1);
+            }
+            else {
+                map.replace(i, map.get(i) + 1);
+            }
+        }
+        for (int x: map.keySet()){
+            if (map.get(x) % 2 == 1){
+                return x;
+            }
+        }
+        return 0;
+    }
 }
