@@ -41,4 +41,16 @@ package L2_cyclic_rotation;
  * In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
  */
 public class Solution {
+    public int[] solution(int[] A, int K) {
+        // write your code in Java SE 8
+        int new_array[] = new int[A.length];
+        for (int i = 0; i < A.length; i++){
+            int new_index = (i+K) % (A.length);
+            new_array[new_index] = A[i];
+        }
+        return new_array;
+    }
+
+    public static void main(String args[]){
+    }
 }
