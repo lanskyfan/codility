@@ -37,6 +37,9 @@ package L12_CommonPrimeDivisors;
 
 //https://stackoverflow.com/questions/34251682/finding-common-prime-divisors-in-two-sets-of-numbers-quickly
 
+// unfinished
+
+
 import java.util.HashSet;
 public class Solution {
     static public int gcd(int N, int M){
